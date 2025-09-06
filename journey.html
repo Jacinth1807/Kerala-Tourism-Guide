@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Journey - Kerala Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11.272l1.691-1.691a1 1 0 011.414 0L12 15.118l5.84-5.84a1 1 0 011.414 0l1.691 1.691a1 1 0 010 1.414L13.414 17.5l-1.691 1.691a1 1 0 01-1.414 0L3.055 12.686a1 1 0 010-1.414z" /></svg>
+                <span class="text-xl font-bold text-green-700">Kerala Tourism</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Home</a>
+                <a href="journey.html" class="text-green-600 hover:text-green-700 font-medium transition duration-300">Plan Journey</a>
+                <a href="Attractions/attractions.html" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Attractions</a>
+                <a href="Places-of-Interest/places.html" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Places of Interest</a>
+                <a href="Art-and-Culture/art.html" class="text-gray-600 hover:text-green-600 font-medium transition duration-300">Art & Culture</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="index.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 transition duration-300">Home</a>
+            <a href="journey.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 transition duration-300">Plan Journey</a>
+            <a href="Attractions/attractions.html" class="block px-4 py-2 text-gray-700 hover:bg-green-50 transition duration-300">Attractions</a>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <div class="page-content container mx-auto px-4">
+            
+            <section class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-green-800 mb-4">Plan Your Perfect Journey</h1>
+                <p class="text-lg text-gray-600">Find the best places to stay, eat, and explore in God's Own Country.</p>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12">
+                <div class="space-y-8">
+                    <div>
+                        <label for="destination" class="block text-xl font-semibold text-gray-700 mb-3">Search Destination</label>
+                        <div class="relative">
+                            <input type="text" id="destination" placeholder="e.g., Munnar, Kovalam, Thekkady" class="w-full p-4 pl-12 text-lg border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition">
+                            <svg class="w-6 h-6 text-gray-400 absolute top-1/2 left-4 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Categories</h3>
+                        <div id="category-buttons" class="flex flex-wrap gap-3">
+                            <button class="category-btn px-5 py-2 text-base font-medium text-green-700 bg-green-100 rounded-full hover:bg-green-200 transition" data-category="Hotels">Hotels</button>
+                            <button class="category-btn px-5 py-2 text-base font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition" data-category="Restaurants">Restaurants</button>
+                            <button class="category-btn px-5 py-2 text-base font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition" data-category="Resorts">Resorts</button>
+                            <button class="category-btn px-5 py-2 text-base font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition" data-category="Homestays">Homestays</button>
+                            <button class="category-btn px-5 py-2 text-base font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition" data-category="Houseboats">House Boats</button>
+                            <button class="category-btn px-5 py-2 text-base font-medium text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200 transition" data-category="Ayurveda">Ayurveda</button>
+                        </div>
+                    </div>
+
+                    <div id="classification-section">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Classification</h3>
+                        <div id="classification-buttons" class="flex flex-wrap gap-3">
+                            </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 id="results-title" class="text-2xl font-bold text-center mb-8">Showing Results for "Hotels"</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card bg-white rounded-2xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/800x600/60a5fa/ffffff?text=Grand+Hyatt" alt="Hotel" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-green-700">Grand Hyatt Kochi</h3>
+                                <span class="text-yellow-500 font-bold">★★★★★</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-4">Bolgatty, Kochi</p>
+                            <p class="text-gray-600 text-sm">A waterfront luxury hotel offering stunning views of Vembanad Lake, with premium amenities.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-white rounded-2xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/800x600/fb923c/ffffff?text=Taj+Malabar" alt="Hotel" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-green-700">Taj Malabar Resort</h3>
+                                <span class="text-yellow-500 font-bold">★★★★★</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-4">Willingdon Island, Kochi</p>
+                            <p class="text-gray-600 text-sm">A charming blend of old-world elegance and modern comfort, located on a beautiful island.</p>
+                        </div>
+                    </div>
+                    <div class="card bg-white rounded-2xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/800x600/f87171/ffffff?text=The+Leela" alt="Hotel" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-semibold text-green-700">The Leela Kovalam</h3>
+                                <span class="text-yellow-500 font-bold">★★★★★</span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-4">Kovalam, Thiruvananthapuram</p>
+                            <p class="text-gray-600 text-sm">India's only cliff-top beach resort offering panoramic views of the Arabian Sea.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contact" class="hidden md:block bg-gray-800 text-gray-200 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4">Plan Your Trip Today</h3>
+            <p class="max-w-xl mx-auto mb-8 text-sm md:text-base">For more information, feel free to reach out. Follow us on social media for the latest updates on events and travel tips.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
+            </div>
+            <p class="mt-8 text-sm text-gray-500">&copy; 2025 Kerala Tourism. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="Scripts/main.js"></script>
+    <script src="Scripts/journey.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/kerala-tourism/
+├── index.html
+├── attractions.html
+├── places.html
+├── art_culture.html
+├── picnic_spots.html
+├── regions.html
+├── spirituality.html
+├── unique_destinations.html
+└── style.css
